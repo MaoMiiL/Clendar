@@ -1,0 +1,10 @@
+body,div,p{
+  margin: 0 0;
+  padding: 0 0;
+}
+span{
+  cursor: pointer;
+}
+.hidden{
+  display: none;
+}

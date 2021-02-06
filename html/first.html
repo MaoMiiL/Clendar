@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" type='text/css' href='../css/basic.css' />
+</head>
+<body>
+<div class="mainContainCss" id="mainContain">
+  <p>
+    DOM:<br/>
+    显示日历
+  </p>
+  <div id="calendar">
+    <div class="dhead">
+      <div class="years">
+        <span id="calendarYear"></span>
+      </div> 
+      <div class="switch-choose">
+        <span class="icon-back-off"><i></i></span>
+        <span class="icon-forward"><i></i></span>
+      </div>
+    </div>
+    <div class="dbody">
+      <div class="cell-years hidden"></div>
+      <div class="cell-months hidden"></div>
+      <div class="cell-weeks"></div>
+      <div class="cell-days"></div>
+    </div>
+    <div class="cal-foot">
+      <div class="cal-foot-left">
+        <span>今天：</span>
+      </div>
+      <div class="cal-foot-rights">
+        <span>时间：</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../js/cssEvent.js"></script>
+<script src="../js/onLoadEvent.js"></script>
+<script src="../js/headTitlesClickEvent.js"></script>
+<script src="../js/kindOfCellClickEvent.js"></script>
+</body>
+</html>

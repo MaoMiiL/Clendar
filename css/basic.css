@@ -1,0 +1,156 @@
+@import url('layout.css');
+@import url('color.css');
+@import url('reset.css');
+
+/*前进后退键*/
+.icon-back-off i::before{
+  content: url('../icon/backOff.png');
+  position: relative;
+  top: 45%;
+}
+.icon-back-off i:hover::before{
+  content: url('../icon/backoff-active.png');
+}
+.icon-forward i::after{
+  content: url('../icon/forward.png');
+  position: relative;
+  top: 45%;
+}
+.icon-forward i:hover::after{
+  content: url('../icon/forward-active.png');
+}
+
+#calendar{
+  border: rgb(168, 228, 247) solid 1px;
+  width: 100%;
+}
+
+#calendar .dhead{
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  font: normal 16px 'Arial', sans-serif;  
+  display: inline-flex;
+}
+/*日历的表头样式*/
+.years,.switch-choose{
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.dhead .years{
+  flex: 1;
+  padding-left: 20px;
+  background-color: white;
+}
+.dhead .years span{
+  padding: 8px 0px;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-40%); 
+}
+.dhead .switch-choose{
+  width: 60px;
+}
+.icon-back-off,.icon-forward{
+  display: inline-block;
+  height: 46px;
+  padding: 0 5px;
+  background-color: white;
+}
+
+/*消除图标之间的间隙*/
+.icon-forward{
+  margin-left: -5px;
+}
+
+#calendarYear:hover{
+  color: dodgerblue;
+}
+
+/*四个大div的样式*/
+.dbody .cell-months,.cell-years{
+  width: 100%;
+  height: 300px;
+  border-top: rgb(223, 223, 223) solid 1px;
+  border-bottom: rgb(223, 223, 223) solid 1px;
+}
+.dbody .cell-weeks{
+  width: 100%;
+  height: 30px;
+  border-top: rgb(223, 223, 223) solid 1px;
+}
+.dbody .cell-days{
+  width: 100%;
+  height: 270px;
+  border-bottom: rgb(223, 223, 223) solid 1px;
+}
+
+/*月份单元格样式*/
+.cell-months .month,.cell-years .year{
+  height: 25%;
+  width: 25%;
+  display: inline-block;
+  text-align: center;
+}
+/*日期单元格样式*/
+.cell-weeks .week{
+  width: 14.2%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.cell-weeks .week span{
+  display:block;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.cell-days .day{
+  width: 14.2%;
+  height: 16.7%;
+  display: inline-block;
+  text-align: center;
+}
+
+/*鼠标停留样式*/
+.cell-days .day:hover,.cell-months .month:hover,.cell-years .year:hover{
+  background-color:  rgb(235, 234, 234);
+}
+.cell-months .month span,.cell-days .day span,.cell-years .year span{
+  font-size: 14px;
+  display:block;
+  width: 100%;
+  padding: 10px 0px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-40%);
+}
+.cell-month-prev,.cell-month-next,.cell-day-prev,.cell-day-next,.cell-year-prev,.cell-year-next{
+  background-color: rgb(247, 247, 247);
+  color: rgb(181, 181, 181);
+}
+.cell-month-current,.cell-year-current{
+  background-color: rgb(54, 169, 247);
+  color: white;
+}
+.cell-day-weekends{
+  color: rgb(223, 70, 70);
+}
+/*底部当日与当前时分秒*/
+.cal-foot{
+  display: inline;
+  height: 46px;
+  line-height: 46px;
+  width: 100%;
+  float: left;
+}
+.cal-foot .cal-foot-left{
+
+}
+.cal-foot .cal-foot-right{
+  
+}
