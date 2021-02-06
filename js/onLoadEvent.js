@@ -37,6 +37,7 @@ function NowDateFormate(date, type) {
       type = type.replace(ret[0], (ret[0].length == 1 ? opt[k] : opt[k].padStart(ret[0].length, "0")));
     }
   }
+  return type;
   console.log("时间格式化:", type);
 }
 
@@ -67,11 +68,25 @@ var nowdate = (new Date()).getTime();
 addLoadEvent(isPCScreen);
 drawCalendarHeadYear(nowdate);
 
+function hhmmss(){
+  let date = new Date();
+  let current = NowDateFormate(date,'HH:MM:SS');
+  let calFootRight = document.getElementsByClassName('cal-foot-right');
+  let children = calFootRight[0].children;
+  children[0].innerText = '时间：'+current;
+  setTimeout(hhmmss,1000);
+}
 
 //画出日历表格头部的年份
 function drawCalendarHeadYear(date) {
   let year = (new Date(date)).getFullYear();
   let month = (new Date(date)).getMonth() + 1;
+  let current = NowDateFormate(date,'YYYY-mm-dd');
+  let calFootLeft = document.getElementsByClassName('cal-foot-left');
+  let children = calFootLeft[0].children;
+  children[0].innerText = '今天：'+current;
+  //时分秒电子表
+  hhmmss(); 
   let calendarYear = document.getElementById('calendarYear');
   calendarYear.setAttribute('title-data', year + "-" + month + "-1")
   let txt = document.createTextNode(year + '年' + month + "月");

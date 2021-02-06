@@ -59,7 +59,6 @@
   padding: 0 5px;
   background-color: white;
 }
-
 /*消除图标之间的间隙*/
 .icon-forward{
   margin-left: -5px;
@@ -141,16 +140,24 @@
   color: rgb(223, 70, 70);
 }
 /*底部当日与当前时分秒*/
-.cal-foot{
-  display: inline;
-  height: 46px;
-  line-height: 46px;
+#calendar .cal-foot{
+  display: inline-flex;
+  height: 30px;
+  line-height: 30px;
   width: 100%;
   float: left;
+  border-bottom: rgb(207, 206, 206) solid 1px;
+  font-size: smaller;
 }
-.cal-foot .cal-foot-left{
-
+.cal-foot-left{
+  display: inline-block;
+  width: 180px;
+  height: 100%;
+  margin-left: 10px;
 }
-.cal-foot .cal-foot-right{
-  
+.cal-foot-right{
+  display: inline-block;
+  margin-right: 10px;
+  flex: 1;
+  text-align: right;
 }
